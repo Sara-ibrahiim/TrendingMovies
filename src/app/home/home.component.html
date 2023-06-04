@@ -1,0 +1,97 @@
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 d-flex align-items-center">
+                <div>
+                    <div class="brdr w-25 mb-3"></div>
+                <h2 class="h3">Trending <br> Movies <br> Right Now</h2>
+                <p class="text-muted ">Most Watched Movies by Week </p>
+               <div class="brdr w-100 mb-3"></div>
+
+                </div>
+                
+
+            </div>
+            <div class="col-md-2" *ngFor="let item of trendingMovie"> 
+                <a [routerLink]="['/details', item.id , item.media_type]">
+                <div class="my-2">
+                    <div class="my-2 position-relative">
+                    <img [src]="'https://image.tmdb.org/t/p/w500'+item.poster_path" alt="" class="w-100">
+                    <h3 class="h5 mt-1 text-center">{{item.title}}</h3>
+                    <div class="vote p-1 top-0 end-0 position-absolute ">{{item.vote_average.toFixed(1)}}</div>
+
+                    </div>
+                    
+
+                </div>
+
+            </a> 
+
+            </div>
+            
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 d-flex align-items-center">
+                <div>
+                    <div class="brdr w-25 mb-3"></div>
+                <h2 class="h3">Trending <br> Tv <br> Right Now</h2>
+                <p class="text-muted ">Most Watched Movies by Week </p>
+               <div class="brdr w-100 mb-3"></div>
+
+                </div>
+                
+
+            </div>
+            <div class="col-md-2" *ngFor="let item of trendingTv">
+                <a [routerLink]="['/details', item.id , item.media_type]">
+                <div class="my-2">
+                    <div class="my-2 position-relative">
+                    <img [src]="'https://image.tmdb.org/t/p/w500'+item.poster_path" alt="" class="w-100">
+                    <h3 class="h5 mt-1 text-center">{{item.name}}</h3>
+                    <div class="vote p-1 top-0 end-0 position-absolute ">{{item.vote_average.toFixed(1)}}</div>
+
+                    </div>
+                    
+
+                </div>
+             </a> 
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 d-flex align-items-center">
+                    <div>
+                        <div class="brdr w-25 mb-3"></div>
+                    <h2 class="h3">Trending <br> People <br> Right Now</h2>
+                    <p class="text-muted ">Most Watched Movies by Week </p>
+                   <div class="brdr w-100 mb-3"></div>
+    
+                    </div>
+                    
+    
+                </div>
+                <div class="col-md-2" *ngFor="let item of trendingPeople"> 
+                    <a [routerLink]="['/details', item.id , item.media_type]">
+                    <div class="my-2">
+                        <div class="my-2 position-relative">
+                        <img [src]="'https://image.tmdb.org/t/p/w500'+item.profile_path" alt="" class="w-100">
+                        <h3 class="h5 mt-1 text-center">{{item.name}}</h3>
+                        <!-- <div class="vote p-1 top-0 end-0 position-absolute ">{{item.vote_average.toFixed(1)}}</div>
+     -->
+                        </div>
+                        
+    
+                      </div>
+                  </a> 
+    
+                </div>
+                
+    
+            </div>
+            
+
+        </div>
+    </div>
+</section>

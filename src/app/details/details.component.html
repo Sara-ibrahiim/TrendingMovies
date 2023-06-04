@@ -1,0 +1,48 @@
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <img *ngIf="item.profile_path" [src]="'https://image.tmdb.org/t/p/w500'+item.profile_path" alt="" class="w-100">
+                <img *ngIf="item.poster_path" [src]="'https://image.tmdb.org/t/p/w500'+item.poster_path" alt="" class="w-100">
+
+            </div>
+            <div class="col-md-6 d-flex align_items-center">
+                <div class="">
+                    <h3 class="my-2">{{item.title}}{{item.name}}</h3>
+                    <p class="text-muted py-2">{{item.overview}} {{item.biography}}</p>
+                    <div *ngIf="item.vote_average">Vote Average : {{item.vote_average}} </div>
+                    <div *ngIf="item.vote_count">Vote count : {{item.vote_count}} </div>
+                    <div *ngIf="item.budget"> budget: {{item.budget}} </div> 
+                    <div *ngIf="item.revenue"> revenue: {{item.revenue}} </div> 
+                    
+                    <div *ngIf="item.birthday"> birthday: {{item.birthday}} </div> 
+
+
+                </div>
+              
+            </div>
+        </div>
+
+
+        <div class="row ">
+            <h3 class="my-3" *ngIf="item.title">Similar Movies</h3>
+            <h3 class="my-3" *ngIf="item.name && item.vote_average && similar.length">Similar Tv</h3>
+            <div class="col-md-2" *ngFor="let item of similar"> 
+            
+                <div class="my-2" (click)="antherDetails(item.id , media_type)">
+                    <div class="my-2 position-relative">
+                    <img [src]="'https://image.tmdb.org/t/p/w500'+item.poster_path" alt="" class="w-100">
+                    <h3 class="h5 mt-1 text-center">{{item.title}} {{item.name}}</h3>
+                    <div class="vote p-1 top-0 end-0 position-absolute ">{{item.vote_average.toFixed(1)}}</div>
+
+                    </div>
+                    
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</section>

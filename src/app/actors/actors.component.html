@@ -1,0 +1,19 @@
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2" *ngFor="let item of trendingActors"> 
+                <a [routerLink]="['/details', item.id , mediaType]">
+                <div class="my-2">
+                    <div class="my-2 position-relative">
+                    <img [src]="'https://image.tmdb.org/t/p/w500'+item.profile_path" alt="" class="w-100">
+                    <h3 class="h5 mt-1 text-center">{{item.name}}</h3>
+                    </div>
+                    
+
+                  </div>
+              </a> 
+
+            </div>
+        </div>
+    </div>
+</section>

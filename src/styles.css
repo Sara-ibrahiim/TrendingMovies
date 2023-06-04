@@ -1,0 +1,76 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Arima:wght@100;200;300;500;600;700&family=Kaushan+Script&display=swap');
+
+:root{
+  --bg-main: #131722;
+  --color-main:#fff;
+  --light-bg:#24baef;
+  --border-color: #949cb0;
+
+}
+
+body{
+  background-color: var(--bg-main);
+  color: var(--color-main);
+  font-family: 'Arima', cursive !important;
+  font-family: 'Kaushan Script', cursive !important;
+}
+
+.bg-lights{
+  background-color: var(--light-bg);
+}
+.brdr{
+  background-color: var(--border-color);
+  height: 1px;
+
+}
+
+a,a:hover
+{
+  color: var(--color-main);
+  text-decoration: none;
+  cursor: pointer !important;
+}
+
+.inputs{
+  background-color: transparent;
+  color: var(--color-main);
+  border: solid 1px var(--border-color);
+}
+
+
+footer{
+  background-color : var(--bg-main)
+}
+.vote{
+  background-color: var(--light-bg);
+  border-top-right-radius: 5px;
+}
+img{
+  border-radius: 5px;
+}
+.blue  a:hover{
+
+  color: var(--light-bg);
+  border-radius: 5px !important;
+  border: #24baef 2px solid !important;
+ 
+}
+
+.blue a{
+  border-radius: 5px !important;
+  border: var(--bg-main) 2px solid !important;
+  margin-left: 15px !important;
+}
+
+.icons i{
+  color: var(--light-bg) !important;
+ 
+}
+.icons i:hover{
+  color: white !important;
+ 
+}
